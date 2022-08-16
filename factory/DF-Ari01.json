@@ -1,0 +1,9 @@
+{
+	"name": "DF-Ari01",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "b227b6fa-fde9-4c11-af24-ecae06b874a2",
+		"tenantId": "dcebf7c9-4817-42ba-94a7-1561ea1ce95f"
+	}
+}
