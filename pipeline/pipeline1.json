@@ -65,8 +65,28 @@
 							},
 							"userProperties": [],
 							"typeProperties": {
+								"source": {
+									"type": "ParquetSource",
+									"storeSettings": {
+										"type": "AzureBlobFSReadSettings",
+										"recursive": true,
+										"wildcardFolderPath": "archivosexamen",
+										"wildcardFileName": "@item()['name']",
+										"enablePartitionDiscovery": false
+									}
+								},
 								"enableStaging": false
-							}
+							},
+							"inputs": [
+								{
+									"referenceName": "Parquet1",
+									"type": "DatasetReference",
+									"parameters": {
+										"archivosexamen": "No Aplica",
+										"Directorio": "No Aplica"
+									}
+								}
+							]
 						}
 					]
 				}
