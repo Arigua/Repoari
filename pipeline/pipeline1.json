@@ -15,17 +15,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"dataset": {
-						"referenceName": "Parquet1",
-						"type": "DatasetReference",
-						"parameters": {
-							"archivosexamen": "archivosexamen",
-							"Directorio": "No aplica"
-						}
-					},
-					"fieldList": [
-						"childItems"
-					],
+					"fieldList": [],
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
 						"recursive": true,
@@ -65,53 +55,8 @@
 							},
 							"userProperties": [],
 							"typeProperties": {
-								"source": {
-									"type": "ParquetSource",
-									"storeSettings": {
-										"type": "AzureBlobFSReadSettings",
-										"recursive": true,
-										"wildcardFolderPath": "archivosexamen",
-										"wildcardFileName": "@item()['name']",
-										"enablePartitionDiscovery": false
-									}
-								},
-								"sink": {
-									"type": "AzureSqlSink",
-									"writeBehavior": "insert",
-									"sqlWriterUseTableLock": false,
-									"tableOption": "autoCreate",
-									"disableMetricsCollection": false
-								},
-								"enableStaging": false,
-								"translator": {
-									"type": "TabularTranslator",
-									"typeConversion": true,
-									"typeConversionSettings": {
-										"allowDataTruncation": true,
-										"treatBooleanAsNumber": false
-									}
-								}
-							},
-							"inputs": [
-								{
-									"referenceName": "Parquet1",
-									"type": "DatasetReference",
-									"parameters": {
-										"archivosexamen": "No Aplica",
-										"Directorio": "No Aplica"
-									}
-								}
-							],
-							"outputs": [
-								{
-									"referenceName": "AzureSqlTable1",
-									"type": "DatasetReference",
-									"parameters": {
-										"Tabla": "@concat(replace(item()['name'],'.parquet'.\"),'_NuevaTabla')",
-										"Esquema": "SalesLT"
-									}
-								}
-							]
+								"enableStaging": false
+							}
 						}
 					]
 				}
