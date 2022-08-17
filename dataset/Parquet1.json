@@ -5,6 +5,14 @@
 			"referenceName": "AddressFT",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"archivosexamen": {
+				"type": "string"
+			},
+			"Directorio": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "Parquet",
 		"typeProperties": {

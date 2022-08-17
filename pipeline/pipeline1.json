@@ -35,13 +35,21 @@
 				"inputs": [
 					{
 						"referenceName": "Parquet1",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"archivosexamen": "No Aplica",
+							"Directorio": "No Aplica"
+						}
 					}
 				],
 				"outputs": [
 					{
 						"referenceName": "AzureSqlTable1",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"Tabla": "@concat(replace(item()['name'],'.parquet'.\"),'_NuevaTabla')",
+							"Esquema": "SalesLT"
+						}
 					}
 				]
 			}
