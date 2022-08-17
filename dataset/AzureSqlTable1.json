@@ -17,8 +17,8 @@
 		"type": "AzureSqlTable",
 		"schema": [],
 		"typeProperties": {
-			"schema": "Esquema",
-			"table": "Tabla"
+			"schema": "@dataset().Esquema",
+			"table": "@dataset().Tabla"
 		}
 	}
 }
