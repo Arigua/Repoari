@@ -18,8 +18,11 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "@dataset()RutaDeArchivos",
-				"fileSystem": "@dataset()SistemaDeArchivos"
+				"folderPath": {
+					"value": "@dataset().RutaDeArchivos",
+					"type": "Expression"
+				},
+				"fileSystem": "@dataset().SistemaDeArchivos"
 			},
 			"compressionCodec": "snappy"
 		},
