@@ -107,7 +107,10 @@
 									"referenceName": "AzureSqlTable1",
 									"type": "DatasetReference",
 									"parameters": {
-										"Tabla": "@concat(replace(item()['name'],'.parquet','').'_NuevaTabla')",
+										"Tabla": {
+											"value": "@concat(\nreplace(\nitem()['name'],\n'.parquet',''),\n'_NuevaTabla')",
+											"type": "Expression"
+										},
 										"Esquema": "SalesLT"
 									}
 								}
